@@ -1,7 +1,7 @@
 from Statistics.Mean import mean
 from Calculator.Squareroot import squarerooting
 
-def population_standard_deviation(data):
+def population_SD(data):
     n = len(data)
     variance = 0
     meanData = mean(data)

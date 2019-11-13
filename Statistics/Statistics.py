@@ -1,6 +1,10 @@
 from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
 from Statistics.Mean import mean
+from Statistics.Median import median
+from Statistics.Mode import mode
+from Statistics.PopulationStandardDeviation import population_SD
+
 
 class Statistics(Calculator):
     data = []
@@ -9,6 +13,18 @@ class Statistics(Calculator):
         self.data = CsvReader(filepath)
         super().__init__()
 
-    def mean(self):
-        self.result = mean(self.data)
-        return self.result
+    def mean(self, data):
+        self.data = mean(data)
+        return self.data
+
+    def median(self, data):
+        self.data = median(data)
+        return self.data
+
+    def mode(self, data):
+        self.data = mode(data)
+        return self.data
+
+    def population_SD(self, data):
+        self.data = population_SD(data)
+        return self.data
