@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tmccalla777/StatCaculator-Miniproject2.svg?branch=master)](https://travis-ci.org/tmccalla777/StatCaculator-Miniproject2)
+
 
 # StatCaculator-Miniproject2
 
