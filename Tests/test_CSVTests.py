@@ -3,10 +3,8 @@ from CsvReader.CsvReader import CsvReader, ClassFactory
 
 '''
 class MyTestCase(unittest.TestCase):
-
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('/Tests/Data/Unit Test Square Root.csv')
-
+        self.csv_reader = CsvReader('/Tests/Data/unit_test_zscore.csv')
     def test_return_data_as_objects(self):
         people = self.csv_reader.return_data_as_objects('person')
         self.assertIsInstance(people, list)
