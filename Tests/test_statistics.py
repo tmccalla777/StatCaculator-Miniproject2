@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
-    
+
     def test_mean_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
