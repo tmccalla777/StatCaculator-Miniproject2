@@ -13,7 +13,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_mean_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
-        test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
         result_data = CsvReader('Tests/Data/result_test_statistics.csv')  # create CSV of results for stat functions
         for row in test_data:
             result = result_data(row['Mean'])
@@ -51,6 +50,6 @@ class MyTestCase(unittest.TestCase):
             result = result_data(row['Variance'])
             self.assertAlmostEqual(self.statistics.population_variance(row['TestData'], result))
             self.assertAlmostEqual(self.statistics.result, row['Variance'])
-            
+
 if __name__ == '__main__':
     unittest.main()
