@@ -1,5 +1,5 @@
-from Statisticss.computation.populationmean import mean
-from Statisticss.computation.sample import Sample
+from Statistics.Mean import mean
+from Statistics.sample import Sample
 
 
 
@@ -14,5 +14,5 @@ def samplemean(list):
 
 
 
-#Sample mean = x = ( Σ xi ) / n
-# http://www.differencebetween.net/science/difference-between-sample-mean-and-population-mean/
+#Samplemean=x = ( Σ xi ) / n
+
