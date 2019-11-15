@@ -3,6 +3,7 @@ from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.StandardDeviation import SD
+from Statistics.PopulationVariance import varianceFunc
 from Statistics.z_score import z_score
 from Statistics.standardized_score import score
 from Statistics.correlation_coefficient import correlation_coefficient
@@ -29,6 +30,10 @@ class Statistics(Calculator):
 
     def SD(self, Value1, Value2, Value3):
         self.result = SD(Value1, Value2, Value3)
+        return self.result
+
+    def varianceFunc(self, a, b, c):
+        self.result = varianceFunc(a,b,c)
         return self.result
 
     def zscore(self, a, b, c):

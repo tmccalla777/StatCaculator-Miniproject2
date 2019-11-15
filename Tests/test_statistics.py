@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
         test_data = CsvReader('Tests/Data/unit_test_variance.csv').data
         for row in test_data:
             result = float(row['Result'])
-            self.assertAlmostEqual(self.statistics.variance(row['Value 1'], ['Value 2'], ['Value 3']), result)
+            self.assertAlmostEqual(self.statistics.varianceFunc(row['Value 1'], row['Value 2'], row['Value 3']), result)
             self.assertAlmostEqual(self.statistics.result, result)
 
 if __name__ == '__main__':
