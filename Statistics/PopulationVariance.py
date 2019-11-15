@@ -7,7 +7,7 @@ def variance(Value1, Value2, Value3):
     meanValue = (a + b + c) / len(values)
     n = len(values)
     variance = 0
-    for i in values:
-        variance = variance + float((meanValue - i) ** 2)
+    for item in values:
+        variance = variance + float((meanValue - item) ** 2)
     varianceValue = float(variance/n)
     return varianceValue

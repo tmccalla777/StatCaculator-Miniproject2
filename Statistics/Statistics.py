@@ -2,7 +2,7 @@ from Calculator.Calculator import Calculator
 from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
-from Statistics.PopulationStandardDeviation import population_SD
+from Statistics.PopulationStandardDeviation import SD
 from Statistics.z_score import z_score
 from Statistics.standardized_score import score
 from Statistics.correlation_coefficient import correlation_coefficient
@@ -27,8 +27,8 @@ class Statistics(Calculator):
         self.result = mode(Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8)
         return self.result
 
-    def population_SD(self, data):
-        self.data = population_SD(data)
+    def population_SD(self, Value1, Value2, Value3):
+        self.result = SD(Value1, Value2, Value3)
         return self.result
 
     def zscore(self, a, b, c):
