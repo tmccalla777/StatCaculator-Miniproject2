@@ -23,8 +23,8 @@ class Statistics(Calculator):
         self.result = median(Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9)
         return self.result
 
-    def mode(self, data):
-        self.data = mode(data)
+    def mode(self, Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8):
+        self.result = mode(Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8)
         return self.result
 
     def population_SD(self, data):
