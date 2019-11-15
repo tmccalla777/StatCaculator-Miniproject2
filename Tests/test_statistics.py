@@ -26,15 +26,15 @@ class MyTestCase(unittest.TestCase):
 
     def test_z_score(self):
         test_data = CsvReader("Tests/Data/unit_test_zscore.csv").data
-        pprint(test_data)
+
         for row in test_data:
             result = float(row['Result'])
-            self.assertEqual(self.statistics.score(row['Value 1'], row['Value 2'], row['Value 3']), result)
+            self.assertEqual(self.statistics.zscore(row['Value 1'], row['Value 2'], row['Value 3']), result)
             self.assertEqual(self.statistics.result, result)
 
     def test_standardized_score(self):
         test_data = CsvReader("Tests/Data/unit_test_standardized_score.csv").data
-        pprint(test_data)
+
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.statistics.standardized(row['Value 1'], row['Value 2'], row['Value 3']), result)
@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_correlation_coefficient(self):
         test_data = CsvReader("Tests/Data/unit_test_population_correlation_coefficient.csv").data
-        pprint(test_data)
+
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.statistics.corr_coef(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4'],
@@ -52,7 +52,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_confidence_interval(self):
         test_data = CsvReader("Tests/Data/unit_test_confidence_interval.csv").data
-        pprint(test_data)
+
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.statistics.confidence(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4'],
@@ -62,7 +62,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_population_variance(self):
         test_data = CsvReader("Tests/Data/unit_test_population_variance.csv").data
-        pprint(test_data)
+
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.statistics.pop_var(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4'],
