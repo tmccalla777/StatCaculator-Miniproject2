@@ -49,37 +49,4 @@ if __name__ == '__main__':
     unittest.main()
     
     
-    def test_pvalue(self):
-
-            test_data = Csvreader('Tests/Data/unit_test_pvalue.csv').data
-           test_result = csvreader('Tests/Data/unit_test_pvalue.csv').data
-
-            for column in test_result:
-                result_test = float(column['pvalue'])
-
-            for column in test_data:
-                a = float(column['a'])
-                b = float(column['b'])
-                c = float(column['c'])
-                d = float(column['d'])
-
-            self.assertAlmostEqual(self.extendedstat.pvalue_(a,b,c,d), result_test)
-            
-            def test_proportion(self):
-
-            test_data = Csvreader('Tests/Data/unit_test_proportion.csv').data
-           test_result = csvreader('Tests/Data/unit_test_proportion.csv').data
-
-            for column in test_result:
-                result_test = float(column['proportion'])
-
-            listx = []
-
-            for row in test_data:
-                result = float(row['Array'])
-                listx.append(result)
-
-
-            self.assertEqual(round(self.extendedstat.proportion_(listx)), round(result_test))
-
    
