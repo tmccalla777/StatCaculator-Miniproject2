@@ -2,7 +2,7 @@ from Calculator.Calculator import Calculator
 from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
-from Statistics.PopulationStandardDeviation import SD
+from Statistics.StandardDeviation import SD
 from Statistics.z_score import z_score
 from Statistics.standardized_score import score
 from Statistics.correlation_coefficient import correlation_coefficient
