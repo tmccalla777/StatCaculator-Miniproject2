@@ -9,6 +9,7 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.calculator = Calculator()
 
+
     def test_zscore(self):
         test_data = CsvReader('/Tests/Data/unit_test_zscore.csv').data
         for row in test_data:
