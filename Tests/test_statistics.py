@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_mean_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
-        result_data = CsvReader('Tests/Data/result_test_statistics.csv')  # create CSV of results for stat functions
+        result_data = CsvReader('Tests/Data/statistics_results.csv')  # create CSV of results for stat functions
         for row in test_data:
             result = result_data(row['Mean'])
             self.assertEqual(self.statistics.mean(row['TestData'], result))
@@ -21,7 +21,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_median_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
-        result_data = CsvReader('Tests/Data/result_test_statistics.csv')
+        result_data = CsvReader('Tests/Data/statistics_results.csv')
         for row in test_data:
             result = result_data(row['Median'])
             self.assertEqual(self.statistics.median(row['TestData'], result))
@@ -29,7 +29,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_mode_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
-        result_data = CsvReader('Tests/Data/result_test_statistics.csv')
+        result_data = CsvReader('Tests/Data/statistics_results.csv')
         for row in test_data:
             result = result_data(row['Mode'])
             self.assertEqual(self.statistics.mode(row['TestData'], result))
@@ -37,7 +37,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_popSD_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
-        result_data = CsvReader('Tests/Data/result_test_statistics')
+        result_data = CsvReader('Tests/Data/statistics_results.csv')
         for row in test_data:
             result = result_data(row['Population SD'])
             self.assertAlmostEqual(self.statistics.population_SD(row['TestData'], result))
@@ -45,7 +45,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_variance_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_statistics.csv')
-        result_data = CsvReader('Tests/Data/result_test_statistics')
+        result_data = CsvReader('Tests/Data/statistics_results.csv')
         for row in test_data:
             result = result_data(row['Variance'])
             self.assertAlmostEqual(self.statistics.population_variance(row['TestData'], result))
