@@ -49,7 +49,7 @@ if __name__ == '__main__':
     unittest.main()
     
     def test_pvalue(self): 
-	        test_data = CsvReader("Tests/Data/name of file.csv").data
+	        test_data = CsvReader("Tests/Data/unit_test_pvalue.csv").data
 	        pprint(test_data)
 	        for row in test_data:
 	           result = int(row['Result'])
@@ -57,7 +57,7 @@ if __name__ == '__main__':
 	           self.assertEqual(self.statistics.result, result)
 
             def test_proportion(self):
-	        test_data = CsvReader("Tests/Data/ name of file ").data
+	        test_data = CsvReader("Tests/Data/unit_test_proportion.cvs ").data
 	        pprint(test_data)
 	        for row in test_data:
 	           result = int(row['Result'])
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 	           self.assertEqual(self.statistics.result, result)
 	
     def test_samplemean (self):
-	        test_data = CsvReader("Tests/Data/ name of file ").data
+	        test_data = CsvReader("Tests/Data/unit_test_sample_mean.cvs").data
 	        pprint(test_data)
 	        for row in test_data:
 	           result = int(row['Result'])
@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
 	
     def test_Variance_of_sample_proportion(self):
-	        test_data = CsvReader("Tests/Data/ name of file ").data
+	        test_data = CsvReader("Tests/Data/unit_test_variance_sample_proportion.cvs ").data
 	        pprint(test_data)
 	        for row in test_data:
 	           result = float(row['Result'])
