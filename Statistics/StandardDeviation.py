@@ -5,5 +5,5 @@ def SD(Value1, Value2, Value3):
     b = int(Value2)
     c = int(Value3)
     varianceValue = varianceFunc(a,b,c)
-    SDvalue = varianceValue**0.5
+    SDvalue = float(varianceValue**0.5)
     return SDvalue

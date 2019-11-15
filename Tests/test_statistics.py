@@ -31,13 +31,13 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.mode(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4'], row['Value 5'], row['Value 6'], row['Value 7'], row['Value 8']), result)
             self.assertEqual(self.statistics.result, result)
 
-    # def test_popSD_statistics(self):
-    #     test_data = CsvReader('Tests/Data/unit_test_SD.csv').data
-    #     for row in test_data:
-    #         result = float(row['Result'])
-    #         self.assertAlmostEqual(self.statistics.SD(row['Value1'], row['Value2'], row['Value3']), result)
-    #         self.assertAlmostEqual(self.statistics.result, result)
-    #
+    def test_popSD_statistics(self):
+        test_data = CsvReader('Tests/Data/unit_test_SD.csv').data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertAlmostEqual(self.statistics.SD(row['Value 1'], row['Value 2'], row['Value 3']), result)
+            self.assertAlmostEqual(self.statistics.result, result)
+
     def test_variance_statistics(self):
         test_data = CsvReader('Tests/Data/unit_test_variance.csv').data
         for row in test_data:
