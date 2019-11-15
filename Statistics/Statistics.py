@@ -5,23 +5,23 @@ from Statistics.Mode import mode
 from Statistics.PopulationStandardDeviation import population_SD
 
 class Statistics(Calculator):
-    data = []
+    result = 0
 
     def __init__(self):
         super().__init__()
 
-    def mean(self, data):
-        self.data = mean(data)
-        return self.data
+    def mean(self, Value1, Value2, Value3):
+        self.result = mean(Value1, Value2, Value3)
+        return self.result
 
-    def median(self, data):
-        self.data = median(data)
-        return self.data
+    def median(self, Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9):
+        self.result = median(Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9)
+        return self.result
 
     def mode(self, data):
         self.data = mode(data)
-        return self.data
+        return self.result
 
     def population_SD(self, data):
         self.data = population_SD(data)
-        return self.data
+        return self.result
