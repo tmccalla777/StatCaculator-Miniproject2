@@ -48,5 +48,47 @@ class MyTestCase(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
     
-    
-   
+    def test_pvalue(self): 
+	        test_data = CsvReader("Tests/Data/name of file.csv").data
+	        pprint(test_data)
+	        for row in test_data:
+	           result = int(row['Result'])
+	           self.assertEqual(self.statistics.value(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4']), result)
+	           self.assertEqual(self.statistics.result, result)
+
+            def test_proportion(self):
+	        test_data = CsvReader("Tests/Data/ name of file ").data
+	        pprint(test_data)
+	        for row in test_data:
+	           result = int(row['Result'])
+	           self.assertEqual(self.statistics.propor(row['Value 1'], row['Value 2'], row['Value 3']), result)
+	           self.assertEqual(self.statistics.result, result)
+	
+    def test_samplemean (self):
+	        test_data = CsvReader("Tests/Data/ name of file ").data
+	        pprint(test_data)
+	        for row in test_data:
+	           result = int(row['Result'])
+	           self.assertEqual(self.statistics.samp_mean(row['Value 1'], row['Value 2'], row['Value 3']), result)
+	           self.assertEqual(self.statistics.result, result)
+	
+
+	                                                 row['Value 5'], row['Value 6'], row['Value 7'], row['Value 8'],
+	                                                 row['Value 9'], row['Value 10']), float(row['Result']))
+	           self.assertEqual(float(self.statistics.result), result)
+	
+
+	
+    def test_Variance_of_sample_proportion(self):
+	        test_data = CsvReader("Tests/Data/ name of file ").data
+	        pprint(test_data)
+	        for row in test_data:
+	           result = float(row['Result'])
+	           self.assertEqual(self.statistics.var_samp_propor(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4'],
+	                                                 row['Value 5'], row['Value 6'], row['Value 7'], row['Value 8'],
+	                                                 row['Value 9'], row['Value 10']), float(row['Result']))
+	           self.assertEqual(self.statistics.result, result)
+
+	
+
+
