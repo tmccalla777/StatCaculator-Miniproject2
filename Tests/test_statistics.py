@@ -51,7 +51,7 @@ if __name__ == '__main__':
     
     def test_pvalue(self):
 
-            test_data = csvreader('Tests/Data/unit_test_pvalue.csv').data
+            test_data = Csvreader('Tests/Data/unit_test_pvalue.csv').data
          #   test_result = csvreader('Tests/Data/unit_test_pvalue.csv').data
 
             for column in test_result:
@@ -67,7 +67,7 @@ if __name__ == '__main__':
             
             def test_proportion(self):
 
-            test_data = csvreader('Tests/Data/unit_test_proportion.csv').data
+            test_data = Csvreader('Tests/Data/unit_test_proportion.csv').data
         #    test_result = csvreader('Tests/Data/unit_test_proportion.csv').data
 
             for column in test_result:
