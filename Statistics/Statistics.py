@@ -3,6 +3,7 @@ from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.PopulationStandardDeviation import population_SD
+from Statistics.PopulationVariance import variance
 
 class Statistics(Calculator):
     result = 0
@@ -20,6 +21,10 @@ class Statistics(Calculator):
 
     def mode(self, Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8):
         self.result = mode(Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8)
+        return self.result
+
+    def variance(self, Value1, Value2, Value3):
+        self.result = variance(Value1, Value2, Value3)
         return self.result
 
     def population_SD(self, data):
