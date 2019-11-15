@@ -47,3 +47,20 @@ class MyTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    
+    def test_proportion(self):
+
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+
+            for column in test_result:
+                result_test = float(column['proportion'])
+
+            listx = []
+
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
+
+
+            self.assertEqual(round(self.extendedstat.proportion_(listx)), round(result_test))
