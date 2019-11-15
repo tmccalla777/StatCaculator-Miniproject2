@@ -27,7 +27,7 @@ class Statistics(Calculator):
         self.result = mode(Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8)
         return self.result
 
-    def population_SD(self, Value1, Value2, Value3):
+    def SD(self, Value1, Value2, Value3):
         self.result = SD(Value1, Value2, Value3)
         return self.result
 
