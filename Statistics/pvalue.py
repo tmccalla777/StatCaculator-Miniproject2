@@ -1,5 +1,4 @@
-from Statistics.Mean import pvalue
-
+import math
 
 def pvalue(a, b, c, d):
 
