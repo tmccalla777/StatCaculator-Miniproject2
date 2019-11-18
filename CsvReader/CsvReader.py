@@ -1,19 +1,17 @@
 import csv
-from CsvReader.ClassFactory import class_factory
 from Fileutilities.absolute_path import absolute_path
+
+
+def ClassFactory(class_name, dictionary):
+    return type(class_name, (object,), dictionary)
 
 
 class CsvReader:
     data = []
-    objects = []
-
-    if data is not None:
-        data.clear()
-
-    if objects is not None:
-        objects.clear()
 
     def __init__(self, filepath):
+        self.data = []
+
         with open(absolute_path(filepath)) as text_data:
             csv_data = csv.DictReader(text_data, delimiter=',')
             for row in csv_data:
@@ -21,6 +19,7 @@ class CsvReader:
         pass
 
     def return_data_as_objects(self, class_name):
+        objects = []
         for row in self.data:
-            self.objects.append(class_factory(class_name, row))
-        return self.objects
+            objects.append(ClassFactory(class_name, row))
+        return objects
