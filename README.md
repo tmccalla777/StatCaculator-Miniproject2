@@ -9,7 +9,6 @@
 ### Riya Desai :woman_student:
 
 ### Travis 
-[![Build Status](https://travis-ci.org/tmccalla777/StatCaculator-Miniproject2.svg?branch=master)](https://travis-ci.org/tmccalla777/StatCaculator-Miniproject2)
 
 ## About 
 This program calculates the following:
